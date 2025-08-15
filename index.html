@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - Creative Developer & 3D Artist</title>
+    <meta name="description" content="Crafting immersive digital experiences through cutting-edge technology and innovative design.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-glow"></div>
+    </div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particle-canvas" class="particle-canvas"></canvas>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-logo">AC</div>
+        <div class="nav-links">
+            <a href="#hero" class="nav-link" data-section="hero">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+            <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+            <a href="#testimonials" class="nav-link" data-section="testimonials">Reviews</a>
+            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </div>
+        <button class="audio-toggle" aria-label="Toggle ambient audio">
+            <span class="audio-icon"></span>
+        </button>
+    </nav>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-text">Loading Experience</div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="main-container">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Alex</span>
+                    <span class="hero-title-line">Chen</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typewriter-text"></span>
+                    <span class="typewriter-cursor">|</span>
+                </div>
+                <div class="hero-bio">
+                    Crafting immersive digital experiences through cutting-edge technology and innovative design
+                </div>
+                <div class="hero-cta">
+                    <button class="btn btn--primary cta-button" data-section="projects">
+                        <span>View My Work</span>
+                        <div class="ripple-effect"></div>
+                    </button>
+                    <button class="btn btn--outline cta-button" data-section="contact">
+                        <span>Get In Touch</span>
+                        <div class="ripple-effect"></div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-bio-cards">
+                        <div class="bio-card floating-card">
+                            <div class="bio-card-content">
+                                <h3>Creative Developer</h3>
+                                <p>Specializing in WebGL, interactive installations, and creative coding</p>
+                            </div>
+                        </div>
+                        <div class="bio-card floating-card" style="--delay: 0.2s">
+                            <div class="bio-card-content">
+                                <h3>3D Artist</h3>
+                                <p>Bringing imagination to life through immersive 3D experiences</p>
+                            </div>
+                        </div>
+                        <div class="bio-card floating-card" style="--delay: 0.4s">
+                            <div class="bio-card-content">
+                                <h3>Innovation Focused</h3>
+                                <p>Pushing the boundaries of what's possible in the browser</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-item" data-year="2024">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Senior Creative Developer</h4>
+                                <p class="timeline-company">Meta Reality Labs</p>
+                                <p class="timeline-description">Leading WebXR initiatives and immersive web experiences</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-year="2022">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>3D Web Specialist</h4>
+                                <p class="timeline-company">Spotify</p>
+                                <p class="timeline-description">Created audio-visual experiences and interactive music visualizations</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-year="2020">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Frontend Developer</h4>
+                                <p class="timeline-company">Netflix</p>
+                                <p class="timeline-description">Built innovative UI components and interactive media experiences</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-year="2018">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Creative Technologist</h4>
+                                <p class="timeline-company">IDEO</p>
+                                <p class="timeline-description">Prototyped emerging technology concepts and digital installations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="skills-content">
+                    <div class="skills-orbit">
+                        <div class="orbit-center">
+                            <div class="selected-category">3D Graphics</div>
+                        </div>
+                        <div class="orbit-ring" data-category="3D Graphics">
+                            <div class="skill-sphere" data-skill="WebGL/Three.js" data-level="95"></div>
+                            <div class="skill-sphere" data-skill="Shader Programming" data-level="85"></div>
+                        </div>
+                        <div class="orbit-ring" data-category="Programming">
+                            <div class="skill-sphere" data-skill="Creative Coding" data-level="90"></div>
+                            <div class="skill-sphere" data-skill="React/Next.js" data-level="92"></div>
+                            <div class="skill-sphere" data-skill="Node.js" data-level="87"></div>
+                        </div>
+                        <div class="orbit-ring" data-category="Animation">
+                            <div class="skill-sphere" data-skill="GSAP Animation" data-level="88"></div>
+                            <div class="skill-sphere" data-skill="Motion Graphics" data-level="89"></div>
+                        </div>
+                        <div class="orbit-ring" data-category="Design">
+                            <div class="skill-sphere" data-skill="UI/UX Design" data-level="83"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-meters">
+                        <div class="skill-meter" data-skill="WebGL/Three.js" data-level="95">
+                            <div class="skill-name">WebGL/Three.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <div class="skill-percentage">95%</div>
+                        </div>
+                        <div class="skill-meter" data-skill="Creative Coding" data-level="90">
+                            <div class="skill-name">Creative Coding</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <div class="skill-percentage">90%</div>
+                        </div>
+                        <div class="skill-meter" data-skill="React/Next.js" data-level="92">
+                            <div class="skill-name">React/Next.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <div class="skill-percentage">92%</div>
+                        </div>
+                        <div class="skill-meter" data-skill="Motion Graphics" data-level="89">
+                            <div class="skill-name">Motion Graphics</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <div class="skill-percentage">89%</div>
+                        </div>
+                        <div class="skill-meter" data-skill="GSAP Animation" data-level="88">
+                            <div class="skill-name">GSAP Animation</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <div class="skill-percentage">88%</div>
+                        </div>
+                        <div class="skill-meter" data-skill="Node.js" data-level="87">
+                            <div class="skill-name">Node.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <div class="skill-percentage">87%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-carousel">
+                    <div class="project-card" data-project="1">
+                        <div class="project-image">
+                            <div class="project-preview"></div>
+                            <div class="project-overlay">
+                                <button class="project-view-btn">View Project</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Quantum Visualization</h3>
+                            <p>Interactive 3D data visualization exploring quantum computing principles through immersive WebGL experiences.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Three.js</span>
+                                <span class="tech-tag">WebGL</span>
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">GLSL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="2">
+                        <div class="project-image">
+                            <div class="project-preview"></div>
+                            <div class="project-overlay">
+                                <button class="project-view-btn">View Project</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Neural Network Garden</h3>
+                            <p>Generative art installation that visualizes machine learning processes as growing, evolving digital organisms.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">p5.js</span>
+                                <span class="tech-tag">TensorFlow.js</span>
+                                <span class="tech-tag">WebAudio</span>
+                                <span class="tech-tag">Canvas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="3">
+                        <div class="project-image">
+                            <div class="project-preview"></div>
+                            <div class="project-overlay">
+                                <button class="project-view-btn">View Project</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Holographic Interface</h3>
+                            <p>Futuristic UI framework with holographic effects, spatial interactions, and gesture-based controls.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Three.js</span>
+                                <span class="tech-tag">WebXR</span>
+                                <span class="tech-tag">GSAP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="4">
+                        <div class="project-image">
+                            <div class="project-preview"></div>
+                            <div class="project-overlay">
+                                <button class="project-view-btn">View Project</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Sonic Landscape</h3>
+                            <p>Audio-reactive 3D environment that transforms music into immersive visual landscapes in real-time.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Web Audio API</span>
+                                <span class="tech-tag">Three.js</span>
+                                <span class="tech-tag">GLSL</span>
+                                <span class="tech-tag">WebGL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">What People Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card holographic-card" data-testimonial="1">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"Alex's work transcends traditional web development. Their ability to blend cutting-edge technology with artistic vision is truly remarkable."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"></div>
+                                <div class="author-info">
+                                    <div class="author-name">Sarah Johnson</div>
+                                    <div class="author-role">Creative Director, Pixar</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="voice-waveform">
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card holographic-card" data-testimonial="2" style="--delay: 0.2s">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"The most innovative 3D web experiences I've seen. Alex consistently pushes the boundaries of what's possible in the browser."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"></div>
+                                <div class="author-info">
+                                    <div class="author-name">Marcus Rodriguez</div>
+                                    <div class="author-role">CTO, Adobe</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="voice-waveform">
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card holographic-card" data-testimonial="3" style="--delay: 0.4s">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">"Working with Alex was transformative. They brought our most ambitious creative concepts to life with stunning technical execution."</div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"></div>
+                                <div class="author-info">
+                                    <div class="author-name">Emma Watson</div>
+                                    <div class="author-role">Design Lead, Google</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="voice-waveform">
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floating-bubbles">
+                    <div class="feedback-bubble">💫</div>
+                    <div class="feedback-bubble">🚀</div>
+                    <div class="feedback-bubble">✨</div>
+                    <div class="feedback-bubble">💎</div>
+                    <div class="feedback-bubble">🌟</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Let's Create Something Amazing</h2>
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-control neon-input" placeholder=" " required>
+                                <label for="name" class="form-label neon-label">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-control neon-input" placeholder=" " required>
+                                <label for="email" class="form-label neon-label">Email Address</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" class="form-control neon-input" rows="5" placeholder=" " required></textarea>
+                                <label for="message" class="form-label neon-label">Your Message</label>
+                            </div>
+                            <button type="submit" class="btn btn--primary send-button">
+                                <span class="send-text">Send Message</span>
+                                <div class="particle-burst"></div>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>hello@alexchen.dev</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/alexchen" target="_blank" class="social-link" data-platform="github">
+                                <div class="social-icon">⚡</div>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://dribbble.com/alexchen" target="_blank" class="social-link" data-platform="dribbble">
+                                <div class="social-icon">🎨</div>
+                                <span>Dribbble</span>
+                            </a>
+                            <a href="https://linkedin.com/in/alexchen" target="_blank" class="social-link" data-platform="linkedin">
+                                <div class="social-icon">💼</div>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://twitter.com/alexchen" target="_blank" class="social-link" data-platform="twitter">
+                                <div class="social-icon">🐦</div>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interactive-map">
+                    <div class="map-container">
+                        <div class="glowing-pin" style="left: 45%; top: 60%;">
+                            <div class="pin-dot"></div>
+                            <div class="pin-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Project Modal -->
+    <div class="project-modal modal hidden" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <div class="project-modal-image">
+                    <div class="project-modal-preview"></div>
+                </div>
+                <div class="project-modal-info">
+                    <h3 class="project-modal-title"></h3>
+                    <p class="project-modal-description"></p>
+                    <div class="project-modal-tech"></div>
+                    <div class="project-modal-links">
+                        <a href="#" target="_blank" class="btn btn--primary project-link">View Live</a>
+                        <a href="#" target="_blank" class="btn btn--outline github-link">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Easter Egg Message -->
+    <div class="easter-egg-message hidden" id="easterEgg">
+        <div class="easter-egg-content">
+            <h3>🎉 You Found The Easter Egg!</h3>
+            <p>Thanks for exploring every corner of my portfolio!</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
