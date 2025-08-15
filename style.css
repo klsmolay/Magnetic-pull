@@ -934,35 +934,6 @@ body {
   width: 100%;
 }
 
-.audio-toggle {
-  background: none;
-  border: 2px solid var(--time-primary);
-  color: var(--time-primary);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  position: relative;
-  transition: all var(--animation-speed) ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.audio-toggle:hover {
-  box-shadow: 0 0 20px var(--time-glow);
-  transform: scale(1.1);
-}
-
-.audio-icon::before {
-  content: '🔊';
-  font-size: 16px;
-}
-
-.audio-toggle.muted .audio-icon::before {
-  content: '🔇';
-}
-
 /* Preloader */
 .preloader {
   position: fixed;
